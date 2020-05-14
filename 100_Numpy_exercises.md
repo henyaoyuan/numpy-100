@@ -74,6 +74,7 @@ print(Z)
 
 
 ```python
+#resize会对原值进行修改并且返回是None，reshape不会对原值进行修改
 Z = np.arange(9).reshape(3,3)
 print(Z)
 ```
