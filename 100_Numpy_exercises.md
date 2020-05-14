@@ -145,6 +145,7 @@ print(Z)
 ```python
 print(0 * np.nan)
 print(np.nan == np.nan)
+#nan:not a number inf:infinity,正无穷
 print(np.inf > np.nan)
 print(np.nan - np.nan)
 print(np.nan in set([np.nan]))
