@@ -190,6 +190,7 @@ print(Z)
 
 
 ```python
+np.mean(Z)和Z.mean()一样么，使用未发现不同？？
 Z = np.random.random((5,5))
 Z = (Z - np.mean (Z)) / (np.std (Z))
 print(Z)
@@ -199,10 +200,14 @@ print(Z)
 
 
 ```python
+#1是什么意思，还没懂。
 color = np.dtype([("r", np.ubyte, 1),
                   ("g", np.ubyte, 1),
                   ("b", np.ubyte, 1),
                   ("a", np.ubyte, 1)])
+#例子
+student = np.dtype([('name','S20'), ('age', 'i1'), ('marks', 'f4')])
+a = np.array([('abc', 21, 50),('xyz', 18, 75)], dtype = student)
 ```
 
 #### 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
