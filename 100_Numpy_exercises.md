@@ -174,6 +174,7 @@ print(Z)
 
 
 ```python
+#获取高维矩阵的第n个值的索引
 print(np.unravel_index(99,(6,7,8)))
 ```
 
