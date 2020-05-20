@@ -265,14 +265,14 @@ print(np.array(0) // np.array(0))
 print(np.array([np.nan]).astype(int).astype(float))
 ```
 
-#### 29. How to round away from zero a float array ? (★☆☆)
+#### 29. How to round away from zero a float array ? (★☆☆) 离0更远
 
 
 ```python
 # Author: Charles R Harris
 
 Z = np.random.uniform(-10,+10,10)
-print (np.copysign(np.ceil(np.abs(Z)), Z))
+print (np.copysign(np.ceil(np.abs(Z)), Z))  #ceil是向大的整数递进
 ```
 
 #### 30. How to find common values between two arrays? (★☆☆)
