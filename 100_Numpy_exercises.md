@@ -358,7 +358,7 @@ print (np.trunc(Z))  #返回截断值
 
 ```python
 Z = np.zeros((5,5))
-Z += np.arange(5)  #返回给定间隔的等间距值
+Z += np.arange(5)  #arange返回给定间隔的等间距值，两个维度不同的array可以相加，有规则
 print(Z)
 ```
 
@@ -369,7 +369,7 @@ print(Z)
 def generate():
     for x in range(10):
         yield x
-Z = np.fromiter(generate(),dtype=float,count=-1)
+Z = np.fromiter(generate(),dtype=float,count=-1)  #fromiter：根据生成器产生一个一维的array
 print(Z)
 ```
 
