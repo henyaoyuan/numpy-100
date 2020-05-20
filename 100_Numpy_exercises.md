@@ -327,7 +327,7 @@ Z = np.arange('2016-07', '2016-08', dtype='datetime64[D]')
 print(Z)
 ```
 
-#### 35. How to compute ((A+B)\*(-A/2)) in place (without copy)? (★★☆)
+#### 35. How to compute ((A+B)\*(-A/2)) in place (without copy)? (★★☆)，返回值赋值的办法都是有copy的
 
 
 ```python
@@ -337,7 +337,7 @@ C = np.ones(3)*3
 np.add(A,B,out=B)
 np.divide(A,2,out=A)
 np.negative(A,out=A)
-np.multiply(A,B,out=A)
+np.multiply(A,B,out=A)  #点乘，dot是矩阵乘
 ```
 
 #### 36. Extract the integer part of a random array using 5 different methods (★★☆)
@@ -347,10 +347,10 @@ np.multiply(A,B,out=A)
 Z = np.random.uniform(0,10,10)
 
 print (Z - Z%1)
-print (np.floor(Z))
-print (np.ceil(Z)-1)
+print (np.floor(Z))  #返回截断值
+print (np.ceil(Z)-1)  #返回递进值
 print (Z.astype(int))
-print (np.trunc(Z))
+print (np.trunc(Z))  #返回截断值
 ```
 
 #### 37. Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
@@ -358,7 +358,7 @@ print (np.trunc(Z))
 
 ```python
 Z = np.zeros((5,5))
-Z += np.arange(5)
+Z += np.arange(5)  #返回给定间隔的等间距值
 print(Z)
 ```
 
