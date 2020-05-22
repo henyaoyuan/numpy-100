@@ -372,8 +372,26 @@ def generate():
 Z = np.fromiter(generate(),dtype=float,count=-1)  #fromiter：根据生成器产生一个一维的array
 print(Z)
 
-#迭代器和生成器
+‘’‘
+https://www.cnblogs.com/lht-record/p/10321820.html
+生成器
+惰性求值和及早求值是编程语言理论方面的技术术语。无论是上述使用迭代器模式或者生成器函数实现的Sentence类都不具有惰性，因为__init__方法急迫得构建好了文本单词列表，然后将其绑定到self.words属性上。列表耗费了大量内存，如果只需要迭代前几个单词，那么大多数工作都是白费力气。
+re.finditer是re.findall的惰性版本，返回的不是列表，而是一个生成器，在一些情况下能够节省大量内存，只在需要的时候产生元素
+
+#迭代器
 #list dict string等都属于可迭代对象。对象是否实现了__iter__方法。可迭代对象与迭代器的关系是：python从可迭代对象中获取迭代器
+’‘’
+def gen_abc():       #函数体中包含yield关键字，就是生成器函数
+    yield 'a'
+    yield 'b'
+    yield 'c'
+
+
+print(gen_abc)
+print(gen_abc())
+for i in gen_abc():    #调用时，会生成传递给yield关键字的表达式的值
+    print(i,'item')
+
 s = 'ABC'
 for char in s:
     print(char)
