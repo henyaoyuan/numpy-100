@@ -368,9 +368,24 @@ print(Z)
 ```python
 def generate():
     for x in range(10):
-        yield x
+        yield x  #生成器关键字
 Z = np.fromiter(generate(),dtype=float,count=-1)  #fromiter：根据生成器产生一个一维的array
 print(Z)
+
+#迭代器和生成器
+#list dict string等都属于可迭代对象。对象是否实现了__iter__方法。可迭代对象与迭代器的关系是：python从可迭代对象中获取迭代器
+s = 'ABC'
+for char in s:
+    print(char)
+
+it = iter(s)        #使用可迭代对象构建迭代器it
+while True:
+    try:
+        print(next(it))        #不断在迭代器上调用next函数，获取下一个字符
+    except StopIteration:  #没有字符会抛出StopIteration
+        del it                     #废弃迭代器对象
+        break   
+
 ```
 
 #### 39. Create a vector of size 10 with values ranging from 0 to 1, both excluded (★★☆)
