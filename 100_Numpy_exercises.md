@@ -410,7 +410,7 @@ while True:
 
 
 ```python
-Z = np.linspace(0,1,11,endpoint=False)[1:]
+Z = np.linspace(0,1,11,endpoint=False)[1:]  #返回等间距的array，0到1分成11等间距
 print(Z)
 ```
 
@@ -430,7 +430,7 @@ print(Z)
 # Author: Evgeni Burovski
 
 Z = np.arange(10)
-np.add.reduce(Z)
+np.add.reduce(Z)  #小的array求和更快，大的差距不大
 ```
 
 #### 42. Consider two random array A and B, check if they are equal (★★☆)
@@ -441,11 +441,11 @@ A = np.random.randint(0,2,5)
 B = np.random.randint(0,2,5)
 
 # Assuming identical shape of the arrays and a tolerance for the comparison of values
-equal = np.allclose(A,B)
+equal = np.allclose(A,B)  #比较两个array是否相近，容忍度可设
 print(equal)
 
 # Checking both the shape and the element values, no tolerance (values have to be exactly equal)
-equal = np.array_equal(A,B)
+equal = np.array_equal(A,B)  #比较两个array是否相等
 print(equal)
 ```
 
@@ -454,7 +454,7 @@ print(equal)
 
 ```python
 Z = np.zeros(10)
-Z.flags.writeable = False
+Z.flags.writeable = False  #设置可写状态
 Z[0] = 1
 ```
 
@@ -475,7 +475,7 @@ print(T)
 
 ```python
 Z = np.random.random(10)
-Z[Z.argmax()] = 0
+Z[Z.argmax()] = 0  #argmax返回最大值的index
 print(Z)
 ```
 
@@ -483,9 +483,9 @@ print(Z)
 
 
 ```python
-Z = np.zeros((5,5), [('x',float),('y',float)])
+Z = np.zeros((5,5), [('x',float),('y',float)])  #自定义dytpe，此处相当于存储多了一个维度
 Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),
-                             np.linspace(0,1,5))
+                             np.linspace(0,1,5))  #meshgrid根据坐标向量返回坐标维度
 print(Z)
 ```
 
