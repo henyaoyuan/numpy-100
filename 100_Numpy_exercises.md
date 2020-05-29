@@ -538,7 +538,7 @@ print(Z[index])
 
 ```python
 Z = np.zeros(10, [ ('position', [ ('x', float, 1),   #numpy的dtype可直接接收list，而list tuple中元素类型可以不一致
-                                  ('y', float, 1)]),
+                                  ('y', float, 1)]),   #('y', float, 1)，这是什么意思，数据类型？
                    ('color',    [ ('r', float, 1),
                                   ('g', float, 1),
                                   ('b', float, 1)])])
