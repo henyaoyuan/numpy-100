@@ -538,11 +538,13 @@ print(Z[index])
 
 ```python
 Z = np.zeros(10, [ ('position', [ ('x', float, 1),   #numpy的dtype可直接接收list，而list tuple中元素类型可以不一致
-                                  ('y', float, 1)]),   #('y', float, 1)，这是什么意思，数据类型？
+                                  ('y', float, 1)]), 
                    ('color',    [ ('r', float, 1),
                                   ('g', float, 1),
                                   ('b', float, 1)])])
+#('y', float, 1)是一个普通的tuple，‘float’也可以是tuple一项，dtype就是接受这种格式，变量（字典）名称&类型
 print(Z)
+print(Z['color']['r'])
 ```
 
 #### 52. Consider a random vector with shape (100,2) representing coordinates, find point by point distances (★★☆)
