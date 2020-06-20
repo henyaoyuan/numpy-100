@@ -633,7 +633,7 @@ print(Z)
 X = np.random.rand(5, 10)
 
 # Recent versions of numpy
-Y = X - X.mean(axis=1, keepdims=True)
+Y = X - X.mean(axis=1, keepdims=True)  #axis=1这个轴上维度是10，每10个数取个平均，与上面的shape一致
 
 # Older versions of numpy
 Y = X - X.mean(axis=1).reshape(-1, 1)
