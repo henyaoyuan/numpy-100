@@ -649,7 +649,8 @@ print(Y)
 
 Z = np.random.randint(0,10,(3,3))
 print(Z)
-print(Z[Z[:,1].argsort()])
+print(Z[Z[:,1].argsort()])  #按照列排序，列index=1即按第二列的数字排序，行维度没有要求，带动整行移动
+print(np.sort(Z, axis=1))  #axis和58题注释一样，axis=1就是列，3列就是对这些三个数排序
 ```
 
 #### 60. How to tell if a given 2D array has null columns? (★★☆)
