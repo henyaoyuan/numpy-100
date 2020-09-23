@@ -485,7 +485,7 @@ print(Z)
 ```python
 Z = np.zeros((5,5), [('x',float),('y',float)])  #自定义dytpe，此处相当于存储多了一个维度
 Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),
-                             np.linspace(0,1,5))  #meshgrid根据坐标向量返回坐标维度
+                             np.linspace(0,1,5))  #meshgrid根据坐标向量返回坐标维度，5*5的格子，需要5*5个x坐标，5*5个y坐标
 print(Z)
 ```
 
